@@ -13,9 +13,9 @@ interface PostItemProps {
 export default function PostItem(props: PostItemProps) {
 	const { post, isProject } = props
 	const directory = isProject ? routes.PROJECTS : routes.BLOG
-	const { hero_src, is_featured, title, subtitle, date } = post
+	const { hero_src, is_featured, title, subtitle, date, slug } = post
 	return (
-		<div className="flex flex-col group">
+		<Link href={`${directory}/${slug}`} className="flex flex-col group">
 			<div className="w-full aspect-video flex items-center overflow-hidden relative">
 				<Image
 					src={hero_src || "/images/test-image.jpeg"}
@@ -55,6 +55,6 @@ export default function PostItem(props: PostItemProps) {
 					</div>
 				)}
 			</div>
-		</div>
+		</Link>
 	)
 }
