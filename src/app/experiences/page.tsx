@@ -12,11 +12,11 @@ export default async function Experiences() {
 	const accordionItems: AccordionItem[] = experiences.map((experience) => ({
 		title: (
 			<div className="flex flex-col items-start">
-				<p className="text-sm text-accent">
+				<p className="text-base text-accent">
 					{getDateString(experience.start)} -{" "}
 					{getDateString(experience.end)}
 				</p>
-				<h3>{experience.title}</h3>
+				<h2 className="font-bold">{experience.title}</h2>
 				<h3 className="opacity-50">{experience.company}</h3>
 			</div>
 		),

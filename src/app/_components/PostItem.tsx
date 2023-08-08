@@ -34,7 +34,7 @@ export default function PostItem(props: PostItemProps) {
 					<h2 className="font-bold">{title}</h2>
 					<h3>{subtitle}</h3>
 				</div>
-				<p className="text-sm">
+				<p className="text-base">
 					<span className="text-accent mr-2">/</span>
 					{getDateString(date)}
 				</p>
