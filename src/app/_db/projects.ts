@@ -4,6 +4,7 @@ export const getProjects = () =>
 	supabase
 		.from("projects")
 		.select("*")
+		.order("date", { ascending: false })
 		.order("is_featured", { ascending: false })
 
 export const getProject = (slug: string) =>
