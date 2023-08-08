@@ -25,3 +25,11 @@ h1 {
 h2 {
 	@apply text-2xl;
 }
+
+p {
+	@apply text-lg;
+}
+
+caption {
+	@apply text-sm;
+}
