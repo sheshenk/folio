@@ -29,7 +29,7 @@ export default function PostItem(props: PostItemProps) {
 					</Chip>
 				)}
 			</div>
-			<div className="flex flex-col gap-4 px-8 -mt-8 z-20">
+			<div className="flex flex-col gap-4 px-8 -mt-4 z-20">
 				<div className="flex flex-col">
 					<h2 className="font-bold">{title}</h2>
 					<h3>{subtitle}</h3>
