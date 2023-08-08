@@ -12,19 +12,22 @@ export default function Home() {
 			<div className="flex flex-col gap-4">
 				<p>
 					<span className="font-bold">Hello! I&apos;m Shashank,</span>{" "}
-					currently a Computer Science junior living in sunny
+					a Computer Science junior at NUS currently living in sunny
 					Singapore. My passion lies in creating practical and
 					valuable apps that have the potential to transform
 					businesses.
 				</p>
 				<p>
-					I&apos;m also on the lookout for opportunities to
-					collaborate with startups right here in Singapore.
-				</p>
-				<p>
-					Feel at home as you explore my portfolio and blog -
-					it&apos;s a space where we can connect, share ideas, and
-					inspire one another!
+					I&apos;m on the lookout for opportunities to collaborate
+					with startups right here in Singapore. Feel free to look
+					around my portfolio and{" "}
+					<a
+						className="text-accent"
+						href="mailto:acharya.s@icloud.com"
+					>
+						get in touch
+					</a>{" "}
+					if you&apos;re interested in wokring together!
 				</p>
 			</div>
 		</div>
