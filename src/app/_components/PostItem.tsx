@@ -2,17 +2,15 @@ import Image from "next/image"
 import Chip from "./Chip"
 import getDateString from "../_utils/getDateString"
 import Link from "next/link"
-import routes from "../_constants/routes"
 import TagRow from "./TagRow"
 
 interface PostItemProps {
 	post: Post
-	isProject?: boolean
+	directory: string
 }
 
 export default function PostItem(props: PostItemProps) {
-	const { post, isProject } = props
-	const directory = isProject ? routes.PROJECTS : routes.BLOG
+	const { post, directory } = props
 	const { hero_src, is_featured, title, subtitle, date, slug } = post
 	return (
 		<Link href={`${directory}/${slug}`} className="flex flex-col group">
@@ -42,7 +40,7 @@ export default function PostItem(props: PostItemProps) {
 				</p>
 				<TagRow
 					tags={post.tags}
-					prefix={directory}
+					directory={directory}
 					className="flex-wrap"
 				/>
 			</div>
