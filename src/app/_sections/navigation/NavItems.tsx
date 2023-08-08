@@ -2,6 +2,7 @@
 import routes from "@/app/_constants/routes"
 import { ElementWithHTMLProps } from "@/app/_types/ElementWithHTMLProps"
 import getNextUrl from "@/app/_utils/getNextUrl"
+import getUrlPrefix from "@/app/_utils/getUrlPrefix"
 import toTitleCase from "@/app/_utils/toTitleCase"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -17,7 +18,7 @@ export default function NavItems(props: ElementWithHTMLProps<HTMLDivElement>) {
 					key={key}
 					href={getNextUrl(value)}
 					className={
-						pathname.startsWith(value)
+						pathname === getUrlPrefix(value)
 							? "text-accent font-bold"
 							: "link with-transition"
 					}
