@@ -18,6 +18,10 @@ export default function PostDetail(props: PostDetailProps) {
 			>
 				<p>Back</p>
 			</Link>
+			<div className="flex flex-col">
+				<h2 className="font-bold">{title}</h2>
+				<h3>{subtitle}</h3>
+			</div>
 			<Image
 				width={800}
 				height={800}
@@ -25,10 +29,6 @@ export default function PostDetail(props: PostDetailProps) {
 				alt={hero_alt || hero_src || ""}
 				className="w-full"
 			/>
-			<div className="flex flex-col">
-				<h2 className="font-bold">{title}</h2>
-				<h3>{subtitle}</h3>
-			</div>
 			{children}
 			<h3 className="border-l-8 pl-4 py-2">
 				<span className="opacity-50">{description}</span>
