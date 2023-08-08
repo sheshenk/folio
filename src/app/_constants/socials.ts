@@ -5,7 +5,7 @@ const socials = [
 		href: "https://linkedin.com/in/achsg",
 	},
 	{ key: "github", name: "GitHub", href: "https://github.com/sheshenk" },
-	{ key: "telegram", name: "Telegram", href: "https://t.me/sheshenk" },
+	{ key: "mail", name: "Mail", href: "mailto:acharya.s@icloud.com" },
 	{ key: "resume", name: "Resume", href: "/images/logo-wordmark.png" },
 ]
 

@@ -4,8 +4,8 @@ import getNextUrl from "@/app/_utils/getNextUrl"
 import {
 	IconBrandGithub,
 	IconBrandLinkedin,
-	IconBrandTelegram,
 	IconLink,
+	IconMail,
 	IconPaperclip,
 	TablerIconsProps,
 } from "@tabler/icons-react"
@@ -20,8 +20,8 @@ const getSocialButtonIcon = (
 			return <IconBrandLinkedin {...props} />
 		case "github":
 			return <IconBrandGithub {...props} />
-		case "telegram":
-			return <IconBrandTelegram {...props} />
+		case "mail":
+			return <IconMail {...props} />
 		case "resume":
 			return <IconPaperclip {...props} />
 		default:
