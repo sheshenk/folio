@@ -3,7 +3,7 @@ import Chip from "./Chip"
 import getDateString from "../_utils/getDateString"
 import Link from "next/link"
 import routes from "../_constants/routes"
-import toSlug from "../_utils/toSlug"
+import TagRow from "./TagRow"
 
 interface PostItemProps {
 	post: Post
@@ -40,20 +40,11 @@ export default function PostItem(props: PostItemProps) {
 					<span className="text-accent mr-2">/</span>
 					{getDateString(date)}
 				</p>
-				{Boolean(post.tags.length) && (
-					<div className="flex flex-wrap gap-2">
-						{post.tags.map((tag, i) => (
-							<Link
-								key={i}
-								href={`${directory}?tag=${toSlug(tag)}`}
-							>
-								<Chip className="bg-gray-200 hover:bg-gray-300 with-transition">
-									{tag}
-								</Chip>
-							</Link>
-						))}
-					</div>
-				)}
+				<TagRow
+					tags={post.tags}
+					prefix={directory}
+					className="flex-wrap"
+				/>
 			</div>
 		</Link>
 	)
