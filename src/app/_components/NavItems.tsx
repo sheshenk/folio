@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation"
 export default function NavItems(props: ElementWithHTMLProps<HTMLDivElement>) {
 	const pathname = usePathname()
 	const { className: injectedClassName = "" } = props
-	const className = `flex flex-col ${injectedClassName}`
+	const className = `flex flex-col gap-1 ${injectedClassName}`
 	return (
 		<div className={className}>
 			{Object.entries(routes)
