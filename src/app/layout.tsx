@@ -32,7 +32,7 @@ export default function RootLayout(props: PropsWithChildren) {
 								</div>
 							</div>
 						</div>
-						<div className="flex items-center w-full py-12">
+						<div className="flex items-center w-full pt-4 pb-16 md:py-16">
 							{children}
 						</div>
 					</div>
