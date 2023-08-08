@@ -1,9 +1,9 @@
 import { PropsWithChildren } from "react"
 import "./globals.css"
 import { DM_Sans } from "next/font/google"
-import NavItems from "./_sections/navigation/NavItems"
+import NavItems from "./_components/NavItems"
 import Logo from "./_components/Logo"
-import SocialButtons from "./_sections/navigation/SocialButtons"
+import SocialButtons from "./_components/SocialButtons"
 
 const dmSans = DM_Sans({ subsets: ["latin"] })
 
