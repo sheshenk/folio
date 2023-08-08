@@ -4,6 +4,8 @@ import { getExperiences } from "../_db/experiences"
 import getDateString from "../_utils/getDateString"
 import toTitleCase from "../_utils/toTitleCase"
 
+export const revalidate = 600
+
 export default async function Experiences() {
 	const experiencesResult = await getExperiences()
 	const experiences = experiencesResult.data as Experience[]

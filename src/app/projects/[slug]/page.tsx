@@ -3,10 +3,9 @@ import PostDetail from "@/app/_components/PostDetail"
 import routes from "@/app/_constants/routes"
 import { getProject } from "@/app/_db/projects"
 import toTitleCase from "@/app/_utils/toTitleCase"
-import Image from "next/image"
 import Link from "next/link"
 
-export const revalidate = 0
+export const revalidate = 600
 
 export default async function Project(props: PageProps) {
 	const {
