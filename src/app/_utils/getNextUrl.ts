@@ -1,3 +1,5 @@
+import supabase from "../_lib/supabase"
+
 export default function getNextUrl(url: string): string {
 	switch (true) {
 		case url.startsWith("/"):
@@ -5,6 +7,7 @@ export default function getNextUrl(url: string): string {
 			return url
 		default:
 			const [bucket, resource] = url.split("/", 2)
-			return resource // TODO: use supabase getPublicUrl
+			return supabase.storage.from(bucket).getPublicUrl(resource).data
+				.publicUrl
 	}
 }
