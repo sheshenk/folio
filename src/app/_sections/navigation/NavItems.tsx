@@ -14,6 +14,7 @@ export default function NavItems(props: ElementWithHTMLProps<HTMLDivElement>) {
 		<div className={className}>
 			{Object.entries(routes).map(([key, value]) => (
 				<Link
+					key={key}
 					href={getNextUrl(value)}
 					className={
 						pathname.startsWith(value)
