@@ -1,4 +1,16 @@
-import { IconBrandGithub, IconBrandLinkedin, IconLink, IconMail, IconPaperclip, TablerIconsProps } from "@tabler/icons-react"
+import {
+	IconAppWindow,
+	IconBrain,
+	IconBrandAsana,
+	IconBrandGithub,
+	IconBrandLinkedin,
+	IconCurrencyEthereum,
+	IconLink,
+	IconMail,
+	IconPaint,
+	IconPaperclip,
+	TablerIconsProps,
+} from "@tabler/icons-react"
 
 export default function getTablerIcon(
 	key: string,
@@ -13,6 +25,14 @@ export default function getTablerIcon(
 			return <IconMail {...props} />
 		case "resume":
 			return <IconPaperclip {...props} />
+		case "window":
+			return <IconAppWindow {...props} />
+		case "brain":
+			return <IconBrain {...props} />
+		case "ethereum":
+			return <IconCurrencyEthereum {...props} />
+		case "paint":
+			return <IconPaint {...props} />
 		default:
 			return <IconLink {...props} />
 	}
