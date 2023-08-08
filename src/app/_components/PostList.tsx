@@ -14,9 +14,9 @@ export default function PostList(props: PostListProps) {
 		(post) => !filterByTag || post.tags.map(toSlug).includes(filterByTag)
 	)
 	return (
-		<div className="flex flex-col gap-12">
+		<div className="flex flex-col gap-12 w-full">
 			{filterByTag && (
-				<div className="flex justify-between gap-4">
+				<div className="flex justify-between items-center gap-4">
 					<h3>
 						<span className="font-semibold">Filtering: </span>
 						{filterByTag}
@@ -29,6 +29,7 @@ export default function PostList(props: PostListProps) {
 			{nextPosts.map((project, i) => (
 				<PostItem key={i} post={project} directory={directory} />
 			))}
+			{!Boolean(nextPosts.length) && "no posts found :("}
 		</div>
 	)
 }
