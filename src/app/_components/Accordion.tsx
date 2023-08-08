@@ -27,22 +27,14 @@ export default function Accordion(props: AccordionProps) {
 					onClick={() => setSelected(selected === i ? null : i)}
 				>
 					<div className="flex items-center gap-4 w-full">
-						<div className="flex flex-col w-full">
+						<div className="flex flex-col gap-4 w-full">
 							{item.title}
-							<div
-								className={
-									i === selected
-										? "max-h-96 mt-4"
-										: "max-h-0 mt-0 overflow-hidden"
-								}
-							>
-								{item.body}
-							</div>
+							{i === selected && <div>{item.body}</div>}
 						</div>
 						<IconCaretDown
 							opacity={0.25}
 							className={
-								i === selected ? "-rotate-90" : "rotate-0"
+								i === selected ? "rotate-0" : "-rotate-90"
 							}
 						/>
 					</div>
