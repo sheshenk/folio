@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { PropsWithChildren } from "react"
+import getNextUrl from "../_utils/getNextUrl"
 
 interface PostDetailProps extends PropsWithChildren {
 	post: Post
@@ -25,7 +26,7 @@ export default function PostDetail(props: PostDetailProps) {
 			<Image
 				width={800}
 				height={800}
-				src={hero_src || "/images/test-image.jpeg"}
+				src={getNextUrl(hero_src || "/images/test-image.jpeg")}
 				alt={hero_alt || hero_src || ""}
 				className="w-full"
 			/>

@@ -3,6 +3,7 @@ import Chip from "./Chip"
 import getDateString from "../_utils/getDateString"
 import Link from "next/link"
 import TagRow from "./TagRow"
+import getNextUrl from "../_utils/getNextUrl"
 
 interface PostItemProps {
 	post: Post
@@ -16,11 +17,11 @@ export default function PostItem(props: PostItemProps) {
 		<Link href={`${directory}/${slug}`} className="flex flex-col group">
 			<div className="w-full aspect-video flex items-center overflow-hidden relative">
 				<Image
-					src={hero_src || "/images/test-image.jpeg"}
+					src={getNextUrl(hero_src || "/images/test-image.jpeg")}
 					alt="Test"
 					width={600}
 					height={300}
-					className="object-fit group-hover:scale-110 with-transition"
+					className="object-fit group-hover:scale-105 with-transition"
 				/>
 				<div className="absolute top-0 left-0 w-full h-full from-white/0 via-white/0 to-white/50 bg-gradient-to-b z-10" />
 				{Boolean(is_featured) && (
