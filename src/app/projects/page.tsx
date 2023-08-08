@@ -8,8 +8,8 @@ export default async function Projects() {
 	const projects = projectsResult.data as Project[]
 	return (
 		<div className="flex flex-col gap-12">
-			{projects.map((project) => (
-				<PostItem post={project} isProject />
+			{projects.map((project, i) => (
+				<PostItem key={i} post={project} isProject />
 			))}
 		</div>
 	)

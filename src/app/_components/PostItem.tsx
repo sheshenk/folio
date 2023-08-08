@@ -42,8 +42,11 @@ export default function PostItem(props: PostItemProps) {
 				</p>
 				{Boolean(post.tags.length) && (
 					<div className="flex flex-wrap gap-2">
-						{post.tags.map((tag) => (
-							<Link href={`${directory}?tag=${toSlug(tag)}`}>
+						{post.tags.map((tag, i) => (
+							<Link
+								key={i}
+								href={`${directory}?tag=${toSlug(tag)}`}
+							>
 								<Chip className="bg-gray-200 hover:bg-gray-300 with-transition">
 									{tag}
 								</Chip>
