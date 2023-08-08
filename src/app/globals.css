@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	@apply text-zinc-900 bg-zinc-100;
+}
+
+.text-accent {
+	@apply text-teal-500;
+}
+
+.with-transition {
+	@apply transition-all duration-200;
+}
+
+.link {
+	@apply opacity-50 hover:opacity-100;
+}
+
+h1 {
+	@apply text-4xl md:text-5xl leading-none;
+}
+
+h2 {
+	@apply text-2xl;
+}
