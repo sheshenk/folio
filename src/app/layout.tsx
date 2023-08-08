@@ -4,6 +4,8 @@ import { DM_Sans } from "next/font/google"
 import NavItems from "./_components/NavItems"
 import Logo from "./_components/Logo"
 import SocialButtons from "./_components/SocialButtons"
+import Link from "next/link"
+import routes from "./_constants/routes"
 
 const dmSans = DM_Sans({ subsets: ["latin"] })
 
@@ -19,13 +21,15 @@ export default function RootLayout(props: PropsWithChildren) {
 								<div className="w-full">
 									<Logo className="w-full opacity-10 -mb-8" />
 									<div className="flex flex-row md:flex-col gap-8 w-full">
-										<h1 className="md:text-right">
-											Shashank
-											<br />
-											<span className="font-bold text-accent">
-												Acharya
-											</span>
-										</h1>
+										<Link href={routes.HOME}>
+											<h1 className="md:text-right">
+												Shashank
+												<br />
+												<span className="font-bold text-accent">
+													Acharya
+												</span>
+											</h1>
+										</Link>
 										<SocialButtons className="hidden md:flex w-full justify-end" />
 										<NavItems className="w-full items-end justify-center" />
 									</div>

@@ -13,19 +13,21 @@ export default function NavItems(props: ElementWithHTMLProps<HTMLDivElement>) {
 	const className = `flex flex-col ${injectedClassName}`
 	return (
 		<div className={className}>
-			{Object.entries(routes).map(([key, value]) => (
-				<Link
-					key={key}
-					href={getNextUrl(value)}
-					className={
-						pathname === getUrlPrefix(value)
-							? "text-accent font-bold"
-							: "link with-transition"
-					}
-				>
-					<h2>{toTitleCase(key)}</h2>
-				</Link>
-			))}
+			{Object.entries(routes)
+				.filter(([_, value]) => value !== routes.HOME)
+				.map(([key, value]) => (
+					<Link
+						key={key}
+						href={getNextUrl(value)}
+						className={
+							pathname === getUrlPrefix(value)
+								? "text-accent font-bold"
+								: "link with-transition"
+						}
+					>
+						<h2>{toTitleCase(key)}</h2>
+					</Link>
+				))}
 		</div>
 	)
 }
